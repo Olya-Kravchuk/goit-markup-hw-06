@@ -20,12 +20,13 @@ p, h1, h2, h3, h4 {
 }
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .container {
   max-width: 1158px;
   padding: 0px 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -98,8 +99,8 @@ img {
 .header-menu {
   display: flex;
   display: none;
-  gap: 40px;
   align-items: center;
+  gap: 40px;
 }
 
 .header-item {
@@ -146,7 +147,6 @@ color: #404bbf;
 .address-list {
   display: flex;
   display: none;
-  gap: 40px;
 }
 
 .address-iten {}
@@ -155,11 +155,11 @@ color: #404bbf;
   display: block;
   padding: 24px 0;
   color: #434455;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover, .address-link:focus {
@@ -265,14 +265,14 @@ color: #404bbf;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #4D5AE5;
+  background-color: #434455;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mob-soc-link:hover, .mob-soc-link:focus {
-  background-color: #404BBF;
+  color: #404BBF;
 }
 .mob-soc-icon {
   fill: #f4f4fd;
@@ -364,7 +364,6 @@ font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-  text-align: center;
 }
 
 .principle-text {
@@ -498,8 +497,8 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 97px;
+  padding-bottom: 96px;
 }
 .footer-container {
   display: flex;
@@ -534,9 +533,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.02em;
   max-width: 288px;
 }
-.soc-container {
-  margin-top: 72px;
-}
+
 .footer-soc-text {
   color: #FFF;
   font-size: 16px;
@@ -852,7 +849,11 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }  
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-.principle-subtitle {
+  .header {
+    padding: 16px 0;
+  }
+
+  .principle-subtitle {
     text-align: center;
   }
   .footer-container {
@@ -865,7 +866,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .footer-soc-text {
     text-align: center;
   }
-    
+.soc-container {
+  margin-top: 72px;
+}
   .subscribe-subtitle {
     justify-content: center;  
   }
@@ -880,17 +883,20 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .container {
     max-width: 766px;
   }
+    .header-logo {
+      margin-right: 120px;
+    }
   .header-menu {
     display: flex;
   }
   .address-list {
     display: block;
     justify-content: center;
-    gap: 12px;
     padding-top: 16px;
   }
     .address-link {
       padding: 0;
+      margin-bottom: 12px;
     }
     .menu-open-btn {
       display: none;
@@ -938,8 +944,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     .portfolio-iten {
       width: calc((100% - 24px) / 2);
     }
+
     .footer-container {
-      max-width: 560px;
+      max-width: 588px;
     }
 .footer-text-container {
   margin-right: 24px;
@@ -972,7 +979,16 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
     .address-list {
       display: flex;
+      gap: 40px;
+      padding: 0;
     }
+.address-link {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+  margin: 0;
+}
   .solutions {
   background-image: linear-gradient(rgba(46, 47, 66, 0.70),
   rgba(46, 47, 66, 0.70)),
@@ -1017,7 +1033,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .principle-text {
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .hero {
@@ -1036,6 +1052,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .portfolio-iten {
     width: calc((100% - 48px) / 3);
   }
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
     .footer-container {
       flex-wrap: nowrap;
     }
@@ -1044,6 +1064,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .footer-subscribe {
     margin-left: 80px;
+    margin-top: 0;
   }
 .footer-form {
   display: flex;
